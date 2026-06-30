@@ -1,0 +1,33 @@
+name: env_name
+channels:
+  - conda-forge
+  - apple
+  - huggingface
+dependencies:
+  - python=3.8
+  - numpy
+  - pandas
+  - matplotlib
+  - hydra-core
+  - scikit-learn
+  - loky
+  - numba
+  - tqdm
+  - geopandas
+  - networkx
+  - rasterio
+  - rasterstats
+  - xarray
+  - rioxarray
+  - apple::tensorflow-deps
+  - huggingface::transformers
+  - pip
+  - pip:
+      - tensorflow-macos
+      - tensorflow-metal
+#      - https://github.com/pandas-profiling/pandas-profiling/archive/master.zip
+
+# Use
+# conda env create --file environment.yml
+# Update after adding packages to this file: conda env update --name env_name --file environment.yml --prune
+# remove conda env: conda env remove --name env_name
